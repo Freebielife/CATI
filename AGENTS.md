@@ -1,40 +1,41 @@
-# TON Observatory Template — canonical shared source
+# CATI Observatory repository instructions
 
-This repository is the canonical basis for future observatories. Do not read or
-clone Freebielife/Ludoman to generate a new site. Use only this repository's local
-reference/ files, scripts, shared registry and tests. Ludoman is an independent
-project and may be changed without migrating its customizations here.
+This is the project repository for the Catizen (CATI) TON observatory. The
+standalone page is `index.html`; `project.json` holds token identity, branding,
+confirmed pools, data sources and methodology. Shared source snapshots and
+factory references retained from the initial repository setup are not live site
+configuration. Do not use this repository as the canonical factory for other
+tokens or copy its CATI data into another observatory.
 
-Before creating a site:
-- Read docs/BRANDING_STANDARD.md and docs/PROJECT_WORKFLOW.md.
-- Gather contract, repository, metadata/site logo with source, explicitly selected
-  section flag and project Telegram channel. Find verifiable inputs independently;
-  ask only for missing essential inputs. Never invent a channel or flag mapping.
-- Verify infrastructure access before long collection: repository, Actions rights,
-  shared scheduler registry and snapshot URLs. Do not print or embed secrets.
-- Use project.json for token-specific settings. No inherited DEV wallets, NFT,
-  staking or promotional rules. Common OG/+888/four-digit DNS/burn badges remain.
-- Add a project/token description to every repository's README. Match the exact
-  contract before researching official websites, documentation, linked channels
-  and token metadata. Save project_description with text, origin, source URLs and
-  checked_at date in project.json. Attribute self-descriptions; never turn a
-  roadmap, promotion or promised return into an established fact. Missing identity
-  or sources must remain explicit; do not identify a token by name alone.
-- Classify services through Tonkeeper first, then corroborated additional sources;
-  normalize address forms and retain attribution provenance.
+## CATI project identity
 
-Before reporting completion:
-- Verify the actual final HTML on mobile and desktop, navigation, buttons, RU/EN,
-  charts, labels, 10->20 holders, overflow and self-contained rendering resources.
-- Check size, token/pool identity, stale/missing states and last-good-data retention.
-- Check the README description and its sources before publication. Metadata may
-  supply a clearly attributed self-description; technical addresses are not prose.
-- Distinguish code saved, HTML verified, site published and automatic refresh verified.
-- Report template version, commit/HTML identity, size, checks, publication/update
-  status and any unverified capabilities. Do not claim a scheduled run was verified
-  unless it was observed.
+- Jetton master: `EQD-cvR0Nz6XAyRBvbhz-abTrRC6sI5tvHvvpeQraV9UAAD7`
+- Symbol: `CATI`; decimals: `9`
+- Hero artwork and section flag: user-provided file, embedded locally in `web/`
+- Official channel: `https://t.me/CatizenAnn`
 
-Do not overwrite concurrent repository changes. Keep a recoverable previous
-version. Never change KITO or migrate existing sites without a separate request.
-Do not deploy the example scheduler over the live shared runner: its registry is
-intentionally empty and all current project registrations must be preserved.
+Treat `project.json` as the project source of truth. Verify on-chain identities
+before changing the contract or pool set. Do not invent labels, service roles,
+links, or token functions; keep source attribution with any added information.
+Do not add credentials to source files or the page.
+
+## Build and verification
+
+Before committing site changes:
+
+1. Run `python3 -m scripts.refresh_observatory` when fresh chain data is needed.
+2. Run `python3 build.py` and `python3 verify.py`.
+3. Check the page at desktop and mobile sizes, all internal links and controls,
+   RU/EN content, holder expansion, and absence of horizontal overflow.
+4. Confirm the output uses the configured CATI contract and pools, records source
+   freshness and partial-history status, and has no external rendering assets.
+5. Preserve the last working snapshot if a data source fails. Do not describe
+   incomplete trade history as complete.
+
+## Publishing and updates
+
+A commit to `main` stores project code in GitHub. It does not by itself publish a
+new page to TON Storage / Resistance Tools or prove that a scheduled refresh ran.
+Report code commits, HTML verification, TON publication, and automated-refresh
+verification as separate states. Do not change other token repositories or the
+shared Cloudflare scheduler from work on this project.

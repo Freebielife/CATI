@@ -1,0 +1,111 @@
+{
+  "slug": "cati",
+  "name": "Catizen",
+  "symbol": "CATI",
+  "master": "EQD-cvR0Nz6XAyRBvbhz-abTrRC6sI5tvHvvpeQraV9UAAD7",
+  "decimals": 9,
+  "github": {
+    "owner": "Freebielife",
+    "repo": "CATI"
+  },
+  "pools": [
+    {
+      "address": "EQBJ_X3ysvgOGUo6XB3eUTCvagarGeA3X-QD3lxSqZzQbQ4w",
+      "dex": "stonfi",
+      "quote": "TON",
+      "evidence": "https://tonapi.io/v2/accounts/EQBJ_X3ysvgOGUo6XB3eUTCvagarGeA3X-QD3lxSqZzQbQ4w/events?limit=100"
+    },
+    {
+      "address": "EQD3RMZD1i2EO1UFYJPwBuxqnesVejvn5SvZ5QIDfW76DJpy",
+      "dex": "dedust",
+      "quote": "TON",
+      "evidence": "https://tonapi.io/v2/accounts/EQD3RMZD1i2EO1UFYJPwBuxqnesVejvn5SvZ5QIDfW76DJpy/events?limit=100"
+    },
+    {
+      "address": "EQCrUzc5dMWGAiF3Db0gqGBKoAX5bNeP1iJUVd08JepdMSjB",
+      "dex": "stonfi",
+      "quote": "TON",
+      "evidence": "https://tonapi.io/v2/accounts/EQCrUzc5dMWGAiF3Db0gqGBKoAX5bNeP1iJUVd08JepdMSjB/events?limit=100"
+    },
+    {
+      "address": "EQBWsxjcc4mlDkkvZxxVlwEuXCv3GQPSPPI_fptXsq9hYoHU",
+      "dex": "stonfi",
+      "quote": "TON",
+      "evidence": "https://tonapi.io/v2/accounts/EQBWsxjcc4mlDkkvZxxVlwEuXCv3GQPSPPI_fptXsq9hYoHU/events?limit=100"
+    }
+  ],
+  "primary_pool": "EQBJ_X3ysvgOGUo6XB3eUTCvagarGeA3X-QD3lxSqZzQbQ4w",
+  "links": {
+    "website": "https://catizen.ai/",
+    "telegram": "https://t.me/CatizenAnn",
+    "x": "https://x.com/CatizenAI"
+  },
+  "services": {
+    "UQD4uGNdB4a3f52mYOZf0x1nCmdd1DAvrLppL0a1cetTYCQx": "Binance",
+    "EQDPfqI17W9lF-3OmAJu92GOn22BoTMdTmW6cY4s0V-ArRRY": "Bybit"
+  },
+  "engine_version": "1.3.0",
+  "discovery": {
+    "checkedAt": 1795715465,
+    "sources": [
+      "https://tonapi.io/v2/jettons/EQD-cvR0Nz6XAyRBvbhz-abTrRC6sI5tvHvvpeQraV9UAAD7",
+      "https://api.geckoterminal.com/api/v2/networks/ton/tokens/EQD-cvR0Nz6XAyRBvbhz-abTrRC6sI5tvHvvpeQraV9UAAD7/pools?page=1",
+      "https://api.geckoterminal.com/api/v2/networks/ton/tokens/EQD-cvR0Nz6XAyRBvbhz-abTrRC6sI5tvHvvpeQraV9UAAD7/pools?page=2"
+    ],
+    "primaryPoolPolicy": "largest indexed USD liquidity among swap-verified supported TON pools"
+  },
+  "project_description": {
+    "text": "Catizen identifies CATI as its utility token and states that it is issued by Catizen Limited, a subsidiary of Catizen Foundation Company.",
+    "origin": "reviewed_sources",
+    "sources": [
+      "https://docs.catizen.ai/usdcati-tokenomics",
+      "https://docs.catizen.ai/decentralized-organization",
+      "https://t.me/CatizenAnn"
+    ],
+    "checked_at": "2026-11-26"
+  },
+  "logo_file": "web/project-logo.webp",
+  "logo_origin": "user_provided",
+  "logo_source": "User-provided attachment: image(20261126-174753).png",
+  "flag_file": "web/project-flag.webp",
+  "flag_source": "User-provided Catizen logo",
+  "service_provenance": {
+    "0:f8b8635d0786b77f9da660e65fd31d670a675dd4302facba692f46b571eb5360": {
+      "category": "custody",
+      "source": "User-provided attribution, 2026-11-22; ownership not independently verified"
+    },
+    "0:cf7ea235ed6f6517edce98026ef7618e9f6d81a1331d4e65ba718e2cd15f80ad": {
+      "category": "custody",
+      "source": "User-provided attribution, 2026-11-22; ownership not independently verified"
+    }
+  },
+  "template_repository": "Freebielife/TON-Observatory-Template",
+  "max_html_bytes": 2500000,
+  "ui": {
+    "holders_initial": 10,
+    "holders_expanded": 20
+  },
+  "methodology": {
+    "valuation": "last observed swap in primary_pool times CURRENT total supply; not circulating market cap",
+    "primary_pool": "EQBJ_X3ysvgOGUo6XB3eUTCvagarGeA3X-QD3lxSqZzQbQ4w",
+    "sellers": "sum of successful supported native TON swap sales; service roles excluded",
+    "holders": "balances excluding known services and identified contracts; unclassified accounts may remain until verified",
+    "burns": "accepted burn notifications and zero-address transfers shown as distinct evidence",
+    "usd": "historical TON/USD rate from CoinGecko",
+    "history": "incremental confirmed swaps; missing intervals remain partial"
+  },
+  "branding": {
+    "hero": {
+      "origin": "user_provided",
+      "source": "User-provided attachment: image(20261126-174753).png",
+      "file": "web/project-logo.webp"
+    },
+    "sectionFlag": {
+      "source": "User-provided Catizen logo",
+      "catalogueKey": null,
+      "emoji": null,
+      "file": "web/project-flag.webp"
+    },
+    "channel": "https://t.me/CatizenAnn"
+  }
+}
